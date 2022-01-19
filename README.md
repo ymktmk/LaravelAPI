@@ -17,3 +17,6 @@ curl -X POST http://127.0.0.1:8000/api/register -d 'name=tomoki&email=exampel@gm
 curl http://127.0.0.1:8000/api/user -H "Authorization:Bearer xxxxxxxxxxxxxxxx"
 ```
 
+## 参考文献
+
+https://www.twilio.com/blog/build-restful-api-php-laravel-sanctum-jp
