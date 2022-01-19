@@ -1,4 +1,7 @@
 ## LaravelでのAPIサンプル
+
+https://laravel.com/docs/8.x/sanctum#overriding-default-models
+
 https://techbowl.co.jp/techtrain/missions/12
 をGolangではなくてLaravelで挑戦中（1/19〜）
 
