@@ -14,7 +14,7 @@ curl -X POST http://127.0.0.1:8000/api/register -d 'name=tomoki&email=exampel@gm
 ユーザー情報取得
 
 ```
-curl http://127.0.0.1:8000/api/user/get -H "Authorization:Bearer xxxxxxxxxxxxxxxx"
+curl http://127.0.0.1:8000/api/user/get -H "Authorization:Bearer t6kkHl95DPrhkMjnN8x2e1IfjcbUF8H7LgDdZA0T"
 ```
 
 ## 参考文献
