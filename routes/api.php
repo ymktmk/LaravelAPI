@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,21 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// 新規登録
+Route::post('/register', [AuthController::class, 'register']);
+// ログイン
+Route::post('/login', [AuthController::class, 'login']);
 
-// ユーザアカウント認証情報作成
-Route::post('user/create', [UserController::class, 'create']);
+// ユーザー情報
+Route::middleware('auth:sanctum')->get('/user/get', [UserController::class, 'show']);
 
-// ユーザ情報取得
-Route::get('/user/{id}', [UserController::class, 'show']);
-
-// ユーザ情報更新
-Route::post('/user/{id}/update', [UserController::class, 'update']);
-
-
-// ・/gacha/draw ガチャ実行API
-// ・/character/list ユーザ所持キャラクター一覧取得API
-// を実装してみましょう。
-// ガチャ実行は指定した回数分キャラクターの排出抽選を行い、ユーザの所持キャラクター情報に保存をします。
+// ユーザー情報更新
+Route::middleware('auth:sanctum')->post('/user/update', [UserController::class, 'update']);
