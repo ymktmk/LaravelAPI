@@ -1,4 +1,4 @@
-## LaravelでのAPIサンプル
+## LaravelでのAPIサンプル（Sanctum）
 
 https://laravel.com/docs/8.x/sanctum#overriding-default-models
 
