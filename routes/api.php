@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\GachaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,13 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// 新規登録
 Route::post('/register', [AuthController::class, 'register']);
-// ログイン
+
 Route::post('/login', [AuthController::class, 'login']);
 
-// ユーザー情報
 Route::middleware('auth:sanctum')->get('/user/get', [UserController::class, 'show']);
 
-// ユーザー情報更新
 Route::middleware('auth:sanctum')->post('/user/update', [UserController::class, 'update']);
+
+Route::middleware('auth:sanctum')->get('/gacha/draw', [GachaController::class, 'draw']);
