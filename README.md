@@ -11,6 +11,12 @@ https://techbowl.co.jp/techtrain/missions/12
 curl -X POST http://127.0.0.1:8000/api/register -d 'name=tomoki&email=exampel@gmail.com&password=xxxxxxxxx'
 ```
 
+ログイン
+
+```
+curl -X POST http://127.0.0.1:8000/api/login -d 'email=exampel@gmail.com&password=xxxxxxxxx'
+```
+
 ユーザー情報を取得
 
 ```
