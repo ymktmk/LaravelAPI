@@ -5,10 +5,10 @@ https://laravel.com/docs/8.x/sanctum#overriding-default-models
 https://techbowl.co.jp/techtrain/missions/12
 をGolangではなくてLaravelで挑戦中（1/19〜）
 
-認証方式
-・FirebaseAuthなどのJWTは通常local storageに保存されるためjavascriptでアクセス可能な領域ですので、XSSの脆弱性アリ
-・Cookie認証はクロスサイトリクエストフォージェリ（CSRF）の対策の必要アリ
-・Token認証はサーバーに保存しない
+## 認証方式
+### FirebaseAuthなどのJWTは通常local storageに保存されるためjavascriptでアクセス可能な領域ですので、XSSの脆弱性アリ
+### Cookie認証はクロスサイトリクエストフォージェリ（CSRF）の対策の必要アリ
+### Token認証はサーバーに保存しない
 
 新規登録
 
