@@ -7,8 +7,9 @@ https://techbowl.co.jp/techtrain/missions/12
 
 ## 認証方式
 ### FirebaseAuthなどのJWTは通常local storageに保存されるためjavascriptでアクセス可能な領域ですので、XSSの脆弱性アリ
+
 ### Cookie認証はクロスサイトリクエストフォージェリ（CSRF）の対策の必要アリ
-### Token認証はサーバーに保存しない
+### Token認証はサーバーに保存しないAPIのヘッダーに組み込んで送信する
 
 新規登録
 
