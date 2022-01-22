@@ -29,6 +29,12 @@ curl -X POST http://127.0.0.1:8000/api/login -d 'email=exampel@gmail.com&passwor
 curl http://127.0.0.1:8000/api/user/get -H "Authorization:Bearer t6kkHl95DPrhkMjnN8x2e1IfjcbUF8H7LgDdZA0T"
 ```
 
+ユーザー情報更新(ユーザー名)
+
+```
+$ curl -X POST http://127.0.0.1:8000/api/user/update -d 'name=yamaoka' -H "Authorization:Bearer t6kkHl95DPrhkMjnN8x2e1IfjcbUF8H7LgDdZA0T"
+```
+
 ## 参考文献
 
 https://www.twilio.com/blog/build-restful-api-php-laravel-sanctum-jp
