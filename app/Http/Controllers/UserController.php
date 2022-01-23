@@ -19,4 +19,9 @@ class UserController extends Controller
         $user->save();
         return response()->json($user);
     }
+
+    public function list() {
+
+    }
+    
 }
