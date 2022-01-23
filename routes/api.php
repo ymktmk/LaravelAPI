@@ -25,3 +25,5 @@ Route::middleware('auth:sanctum')->get('/user/get', [UserController::class, 'sho
 Route::middleware('auth:sanctum')->post('/user/update', [UserController::class, 'update']);
 
 Route::middleware('auth:sanctum')->get('/gacha/draw', [GachaController::class, 'draw']);
+
+Route::middleware('auth:sanctum')->get('/character/list', [UserController::class, 'list']);
