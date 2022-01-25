@@ -6,8 +6,6 @@ https://techbowl.co.jp/techtrain/missions/12
 をGolangではなくてLaravelで挑戦中（1/19〜）
 
 ## 認証方式
-### Cookie認証はクロスサイトリクエストフォージェリ（CSRF）の対策の必要アリ
-今回はコッチ↓
 ### Token認証はサーバーに保存しないAPIのヘッダーに組み込んで送信する
 
 新規登録
