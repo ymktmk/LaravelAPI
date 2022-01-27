@@ -21,7 +21,7 @@ class UserController extends Controller
     }
 
     public function list() {
-
+        // DBから取り出す
     }
     
 }
