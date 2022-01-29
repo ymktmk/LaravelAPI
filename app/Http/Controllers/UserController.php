@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Character;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -20,8 +21,9 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    public function list() {
-
+    public function list(Request $request) {
+        $characters = Character::where('user_id', $request->user()->id)->get();
+        return response()->json([$characters]);
     }
     
 }
