@@ -17,13 +17,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/register', [AuthController::class, 'register']);
-
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::middleware('auth:sanctum')->get('/user/get', [UserController::class, 'show']);
+Route::middleware('auth:sanctum')->group(function() {
+    Route::prefix('user')->group(function () {
+        Route::get('get', [UserController::class, 'show']);
+        Route::post('update', [UserController::class, 'update']);
+    });
+    Route::get('/gacha/draw', [GachaController::class, 'draw']);
+    Route::get('/character/list', [UserController::class, 'list']);
+});
 
-Route::middleware('auth:sanctum')->post('/user/update', [UserController::class, 'update']);
-
-Route::middleware('auth:sanctum')->get('/gacha/draw', [GachaController::class, 'draw']);
-
-Route::middleware('auth:sanctum')->get('/character/list', [UserController::class, 'list']);
