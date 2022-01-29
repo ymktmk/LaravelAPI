@@ -38,6 +38,12 @@ curl -X POST http://127.0.0.1:8000/api/user/update -d 'name=yamaoka' -H "Authori
 curl http://127.0.0.1:8000/api/gacha/draw -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
 ```
 
+自分の手持ちポケモン
+
+```
+curl http://127.0.0.1:8000/api/character/list -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
+```
+
 ## 参考文献
 
 https://www.twilio.com/blog/build-restful-api-php-laravel-sanctum-jp
