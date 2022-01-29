@@ -23,19 +23,19 @@ curl -X POST http://127.0.0.1:8000/api/login -d 'email=example@gmail.com&passwor
 ユーザー情報を取得
 
 ```
-curl http://127.0.0.1:8000/api/user/get -H "Authorization:Bearer zGgEs4uzNAb3OIvsb9Wfphkr1A7h2XYmoUdgtKLy"
+curl http://127.0.0.1:8000/api/user/get -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
 ```
 
 ユーザー情報更新(ユーザー名)
 
 ```
-curl -X POST http://127.0.0.1:8000/api/user/update -d 'name=yamaoka' -H "Authorization:Bearer zGgEs4uzNAb3OIvsb9Wfphkr1A7h2XYmoUdgtKLy"
+curl -X POST http://127.0.0.1:8000/api/user/update -d 'name=yamaoka' -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
 ```
 
 ガチャを引く(PokeAPIを使っている)
 
 ```
-curl http://127.0.0.1:8000/api/gacha/draw -H "Authorization:Bearer zGgEs4uzNAb3OIvsb9Wfphkr1A7h2XYmoUdgtKLy"
+curl http://127.0.0.1:8000/api/gacha/draw -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
 ```
 
 ## 参考文献
