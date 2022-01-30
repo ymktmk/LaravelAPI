@@ -8,6 +8,9 @@ https://techbowl.co.jp/techtrain/missions/12
 ## 認証方式
 ### Token認証はサーバーに保存しないAPIのヘッダーに組み込んで送信する
 
+## リクエストヘッダ
+Content-Type : application/x-www-form-urlencoded
+
 新規登録
 
 ```
