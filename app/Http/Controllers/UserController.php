@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    // あとはレスポンスの項目のみ
     public function show(Request $request) {
         return $request->user();
     }
