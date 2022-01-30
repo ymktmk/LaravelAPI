@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserUpdateRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Character;
-use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -14,16 +14,16 @@ class UserController extends Controller
         return $request->user();
     }
 
-    public function update(Request $request) {
-        $email = $request->user()->email;
-        $user = User::where('email', $email)->first();
+    public function update(UserUpdateRequest $request) {
+        $user = User::where('email', $request->user()->email)->first();
         $user->name = $request->name;
         $user->save();
         return response()->json($user);
     }
 
     public function list(Request $request) {
-        $characters = Character::where('user_id', $request->user()->id)->get();
+        $user_id = $request->user()->id;
+        $characters = Character::where('user_id', $user_id)->get();
         return response()->json([$characters]);
     }
     
