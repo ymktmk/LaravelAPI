@@ -29,7 +29,7 @@ curl -X POST http://127.0.0.1:8000/api/login -d 'email=example@gmail.com&passwor
 curl http://127.0.0.1:8000/api/user/get -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
 ```
 
-ユーザー情報更新(ユーザー名)
+ユーザー情報更新
 
 ```
 curl -X POST http://127.0.0.1:8000/api/user/update -d 'name=yamaoka' -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
