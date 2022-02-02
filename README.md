@@ -35,7 +35,7 @@ curl http://127.0.0.1:8000/api/user/get -H "Authorization:Bearer TQU1lynT5KwprBX
 curl -X POST http://127.0.0.1:8000/api/user/update -d 'name=yamaoka' -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
 ```
 
-ガチャを引く(PokeAPIを使っている)
+ガチャを引く
 
 ```
 curl http://127.0.0.1:8000/api/gacha/draw -H "Authorization:Bearer TQU1lynT5KwprBXHBZ9doUvfaNi0YF2yc0ioW1uB"
